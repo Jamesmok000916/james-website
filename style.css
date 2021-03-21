@@ -1,0 +1,185 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body style */
+body {
+    background-image: url("pic/bg.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+/* The space on both sides */
+[class="container-fluid"] {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* W3.CSS */
+.w3-animate-top{position:relative;animation:animatetop 1s;}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-animate-left{position:relative;animation:animateleft 1s;}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.w3-animate-right{position:relative;animation:animateright 1s;}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+
+/* Main heading */
+nav + h1 {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Berkshire Swash';
+    font-weight: bold;
+    animation-name: shadow-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Main heading color animation */
+@keyframes shadow-animation {
+    0%   { text-shadow: 3px 3px 15px red; }
+    10%  { text-shadow: 3px 3px 15px deepskyblue; }
+    20%  { text-shadow: 3px 3px 15px yellow; }
+    30%  { text-shadow: 3px 3px 15px green; }
+    40% { text-shadow: 3px 3px 15px purple; }
+    50% { text-shadow: 3px 3px 15px orange; }
+    60% { text-shadow: 3px 3px 15px lawngreen; }
+    70% { text-shadow: 3px 3px 15px palevioletred; }
+    80% { text-shadow: 3px 3px 15px greenyellow; }
+    90% { text-shadow: 3px 3px 15px cyan; }
+    100% { text-shadow: 3px 3px 15px red; }
+}
+
+/* Headings */
+a[name] {
+    padding: 56px;
+    font-style: italic;
+}
+
+/* Name card gradient background */
+.grad {
+    background-image: linear-gradient(to bottom right, deepskyblue, lightblue, whitesmoke);
+}
+
+/* Name card font style */
+div[class="card-body grad"] > h5[class="card-title"] {
+    font-size: 25px;
+    font-family: 'Lobster';
+    text-align: center;
+}
+
+/* Name card button facebook icon */
+[href*="facebook"]::before {
+    content: url(pic/fb.png);
+}
+
+/* Name card button instagram icon */
+[href*="instagram"]::before {
+    content: url(pic/ig.png);
+}
+
+/* Paragraph font style */
+.main_para {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Custom horizontal rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Unordered list in two columns */
+.ul-2-col {
+    list-style-type:square;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+/* Table style */
+table, th, td {
+    border: 1px solid dodgerblue;
+    border-collapse: collapse;
+    background-color: lightcyan;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    border-bottom: 4px double mediumblue;
+    font-style: oblique;
+    background-color: lightskyblue;
+}
+
+/* Border image */
+.border-image {
+    border: 10px solid transparent;
+    border-image: url(pic/border-image.png) 40 stretch;
+}
+
+/* Emoji at the front */
+.award1::before {
+    content: "\1F3C5";
+}
+
+/* Emoji at the end */
+.award2::after {
+    content: "\1F3C5";
+}
+
+/* Useful links rounded card */
+.rounded-radius {
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border: 3px double lightgray;
+}
+
+/* Link style */
+[class~="card-text"] > a:visited {
+    color: #0091ff;
+}
+
+[class~="card-text"] > a:hover {
+    color: #00ba1e;
+}
+
+[class~="card-text"] > a:active {
+    color: #ff851a;
+}
+
+/* Link icon */
+.icon::before {
+    content: url(pic/web.png);
+}
+
+/* Mouse hover effect */
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+/* Back to top button style */
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: #4580ff url("pic/up-arrow.png") no-repeat center 43%;
+    border-radius: 30px;
+}
+a:hover.back-to-top {
+    background-color: darkblue;
+    transition: 1s;
+}
